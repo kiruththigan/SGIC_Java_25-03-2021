@@ -1,0 +1,113 @@
+Q1. What is inheritance?
+	inheritance is a mechanism in one object contains all the properties
+	and behaviors of a parent object.
+Q2.b. Does Java support Multiple inheritance? If answer is ‘no’ give an example for how we 
+can achieve multiple inheritance?
+	No.
+	use interfaces for the muliple inheritance in java.
+	because one class implements 2interfaces.
+
+Q4.
+	i)
+		public class OOPExercises {// extends A
+ 			public static void main(String[] args) {
+ 			A objA = new A();
+ 			System.out.println("in main(): ");
+ 			System.out.println("objA.a = "+objA.a);
+ 			objA.a = 222;
+ 			}
+		}//main
+		
+		public class A {
+			 private int a = 100; // change public 
+			 public void setA( int value) {
+				 a = value;
+			}
+		 	public int getA() {
+		 		return a;
+		 	}
+		} //class A
+	
+	
+
+	ii)
+
+		spublic class OOPExercises {//remove s
+			public static void main(String[] args) {
+				//A obj=new A();create object
+				System.out.println("in main(): ");
+				System.out.println("objA.a = "+getA() );//obj.
+				setA(123);//obj.
+			}
+		}//main
+
+
+		public class A {
+			private int a = 100;
+	
+			public void setA( int value) {
+				a = value;
+			}
+	
+			public int getA() {
+				return a;
+			}
+		} //class 
+
+	
+	iii)
+		public class B extends A {
+			private int a = 222;// change to static variable
+			public static void main(String[] args) {
+				 System.out.println("in main(): ");
+				 System.out.println("a = "+a );
+				 a = 123;
+			 }
+		}
+
+		public class A {
+			private int a = 100;
+			 public void setA( int value) {
+			 a = value;
+			}
+		
+			 public int getA() {
+				 return a;
+			 }
+		} //class A
+
+
+Q5.
+	i)
+		in the constructor of class A:
+		a = 100
+		a = 333
+		-----in the constructor of class B:
+		b = 123.45
+		b = 3.14159
+		in main():
+		objA.a = 333
+		objB.b = 3.14159
+		objA.a = 222
+		objB.b = 333.33
+
+	ii)
+		in the constructor of class A:
+		a = 100
+		a = 333
+		-----in the constructor of class B:
+		b = 123.45
+		b = 3.14159
+		in main():
+		objB.b = 3.14159
+		objB.b = 333.33
+
+	iii)
+
+		a in A = 100
+		a in B = 123
+		a in B = 123
+		a in C = 543
+		a in C = 543
+		a in C = 543
+
